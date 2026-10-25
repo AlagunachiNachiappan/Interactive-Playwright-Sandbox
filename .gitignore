@@ -6,14 +6,18 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
-pages/*.ts
+/downloads/
+/screenshots/
+/uploads/
+test-2.spec.ts-snapshots/
+test-data/
 .env
-authentication.spec.ts
-api.spec.ts
-test.spec.ts
-pom.spec.ts
-sample.spec.ts
 
+api.spec.ts
+authentication.spec.ts
+sample.spec.ts
+test-2.spec.ts
 webpom.spec.ts
-tests/webpom.spec.ts
-tests/webpom.spec.ts
+
+sample.page.ts
+webpom.page.ts
