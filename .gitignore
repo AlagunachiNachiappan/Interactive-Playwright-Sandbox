@@ -17,6 +17,7 @@ api.spec.ts
 authentication.spec.ts
 sample.spec.ts
 test-2.spec.ts
+test.spec.ts
 webpom.spec.ts
 
 sample.page.ts
