@@ -13,12 +13,12 @@ test-2.spec.ts-snapshots/
 test-data/
 .env
 
-api.spec.ts
-authentication.spec.ts
-sample.spec.ts
-test-2.spec.ts
-test.spec.ts
-webpom.spec.ts
+/tests/api.spec.ts
+/tests/authentication.spec.ts
+/tests/sample.spec.ts
+/tests/test-2.spec.ts
+/tests/test.spec.ts
+/tests/webpom.spec.ts
 
-sample.page.ts
-webpom.page.ts
+/pages/sample.page.ts
+/pages/webpom.page.ts
