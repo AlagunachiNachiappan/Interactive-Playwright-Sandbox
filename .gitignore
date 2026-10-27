@@ -8,7 +8,6 @@ node_modules/
 /playwright/.auth/
 /downloads/
 /screenshots/
-/uploads/
 test-2.spec.ts-snapshots/
 test-data/
 .env
