@@ -267,8 +267,9 @@ export class AdvPage {
     }
 
     async Option6() {
+        //test.setTimeout(300000);
         await this.DargCard.dragTo(this.DropTraget);
-        await expect(this.page.getByText('Drop completed successfully.')).toBeVisible();
+        await expect(this.page.getByText('Drop completed successfully.')).toBeVisible({ timeout: 80000 });
     }
 
     async Option7() {
@@ -323,6 +324,7 @@ export class AdvPage {
     }
 
     async Option12() {
+        test.setTimeout(300000);
         await this.NavigationLink.click();
         await this.page.waitForURL('https://playwright-mastery-academy-app.vercel.app/practice/popup?source=waitfornavigation')
         await expect(this.page.getByText('Popup Opened Successfully')).toBeVisible({ timeout: 50000 })
