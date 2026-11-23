@@ -269,7 +269,8 @@ export class AdvPage {
     async Option6() {
         //test.setTimeout(300000);
         await this.DargCard.dragTo(this.DropTraget);
-        await expect(this.page.getByText('Drop completed successfully.')).toBeVisible({ timeout: 80000 });
+        await this.page.waitForTimeout(5000);
+        await expect(this.page.getByText('Drop completed successfully.')).toBeVisible();
     }
 
     async Option7() {
@@ -338,6 +339,7 @@ export class AdvPage {
 
         await this.TestLoadState.click();
         await this.page.waitForLoadState('load');
+          await this.page.waitForTimeout(5000);
         await expect(this.page.getByText('Test load State: Completed')).toBeVisible()
 
         await this.TestDOMContentLoadedState.click();
