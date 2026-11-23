@@ -268,7 +268,7 @@ export class AdvPage {
 
     async Option6() {
         await this.DargCard.dragTo(this.DropTraget);
-        await expect(this.page.getByText('Drop completed successfully.')).toBeVisible({timeout: 50000});
+        await expect(this.page.getByText('Drop completed successfully.')).toBeVisible();
     }
 
     async Option7() {
