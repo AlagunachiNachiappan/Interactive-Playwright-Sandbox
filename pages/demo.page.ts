@@ -268,8 +268,9 @@ export class AdvPage {
 
     async Option6() {
         test.setTimeout(300000);
-        await this.DargCard.dragTo(this.DropTraget);
-        //await this.page.waitForTimeout(40000);
+        await expect(this.DargCard).toBeVisible();
+        await expect(this.DropTraget).toBeVisible();
+        await this.DargCard.dragTo(this.DropTraget, { timeout: 30000 });
         await expect(this.page.getByText('Drop completed successfully.')).toBeVisible({ timeout: 15000 });
     }
 
@@ -339,16 +340,16 @@ export class AdvPage {
 
         await this.TestLoadState.click();
         await this.page.waitForLoadState('load');
-          await this.page.waitForTimeout(5000);
+        await this.page.waitForTimeout(5000);
         await expect(this.page.getByText('Test load State: Completed')).toBeVisible()
 
         await this.TestDOMContentLoadedState.click();
         await this.page.waitForLoadState('domcontentloaded');
-        await expect(this.page.getByText('Test DOMContentLoaded State: Completed')).toBeVisible({timeout: 50000})
+        await expect(this.page.getByText('Test DOMContentLoaded State: Completed')).toBeVisible({ timeout: 50000 })
 
         await this.TestNetworkIdleState.click();
         await this.page.waitForLoadState('networkidle')
-        await expect(this.page.getByText('Test Network Idle State: Completed')).toBeVisible({timeout: 50000})
+        await expect(this.page.getByText('Test Network Idle State: Completed')).toBeVisible({ timeout: 50000 })
 
     }
 
@@ -357,7 +358,7 @@ export class AdvPage {
         await this.page.screenshot({ path: 'screenshots/page_1.png', fullPage: true });
     }
 
-   
+
 
     async navigateTo() {
         await this.page.goto(process.env.ADV_URL!)
